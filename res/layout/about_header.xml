@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#5C5454" >
+
+    <RelativeLayout
+        android:id="@+id/relative_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_header" >
+
+        <ImageButton
+            android:id="@+id/btn_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:onClick="createAboutDialog"
+            android:src="@drawable/btn_info" />
+
+        <it.futura.generalradioplayer.custom.CustomTextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="70dp"
+            android:layout_toRightOf="@+id/btn_about"
+            android:text="@string/radion_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/big" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageFan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_header"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:onClick="openFacebookPage"
+        android:scaleType="fitXY"
+        android:src="@drawable/fanpage" />
+
+</RelativeLayout>

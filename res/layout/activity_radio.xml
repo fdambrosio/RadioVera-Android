@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RadioActivity" >
+
+    <include
+        android:id="@+id/head_radio"
+        layout="@layout/about_header" />
+
+    <!-- <fragment -->
+    <!-- android:id="@+id/bodyFragment" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_above="@+id/linearPlay" -->
+    <!-- android:layout_below="@+id/head" -->
+    <!-- class="it.futura.generalradioplayer.RadioFragment" /> -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textAir"
+        android:layout_below="@+id/head_radio"
+        android:background="@drawable/center" >
+
+        <ImageView
+            android:id="@+id/imageOnAir"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/back_image" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/textAir"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/linearPlay_radio"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/textAir" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_above="@+id/linearPlay_radio" -->
+    <!-- android:layout_alignParentLeft="true" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:background="@drawable/back_air" -->
+    <!-- android:text="On Air" -->
+    <!-- android:textAlignment="center" -->
+    <!-- android:textAppearance="?android:attr/textAppearanceMedium" /> -->
+
+    <LinearLayout
+        android:id="@+id/linearPlay_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearBottom"
+        android:background="@drawable/back_bottom"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <ImageButton
+            android:id="@+id/play_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:background="@android:color/transparent"
+            android:onClick="manageRadio"
+            android:src="@drawable/play" />
+
+        <SeekBar
+            android:id="@+id/seek_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.9"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/styled_progress"
+            android:secondaryProgress="0"
+            android:thumb="@drawable/seek_thumb" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/back_bottom_2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="0.9" >
+
+        <ImageButton
+            android:id="@+id/btn_air"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:background="@android:color/transparent"
+            android:src="@drawable/air_h" />
+
+        <ImageView
+            android:id="@+id/imm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:onClick="openRadio"
+            android:src="@drawable/logo" />
+
+        <ImageButton
+            android:id="@+id/btn_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:background="@android:color/transparent"
+            android:onClick="goToContact"
+            android:src="@drawable/send_btn" />
+    </LinearLayout>
+
+</RelativeLayout>
